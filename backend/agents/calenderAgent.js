@@ -3,7 +3,7 @@ const { createOAuthClient } = require("../utils/google");
 const User = require("../models/User");
 const { parseDateTime } = require("../utils/parseDateTime");
 
-exports.CalendarAgent = async (userId, info) => {
+const CalendarAgent = async (userId, info) => {
   const user = await User.findById(userId);
   if (!user) throw new Error("User not found");
 
@@ -79,3 +79,4 @@ exports.CalendarAgent = async (userId, info) => {
     meetLink: meetLink || null,
   };
 };
+module.exports = { CalendarAgent };
