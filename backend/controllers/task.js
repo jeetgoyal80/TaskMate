@@ -3,7 +3,7 @@ const Chat = require("../models/Chat");
 const { getIntentAndEntities } = require("../llm/langchainGemini");
 
 const { AlarmAgent } = require("../agents/alarmAgent");
-const { ReminderAgent } = require("../agents/reminderAgent");
+const { ReminderAgent } = require("../agents/ReminderAgent");
 const { EmailAgent } = require("../agents/emailAgent");
 const { WeatherAgent } = require("../agents/weatherAgent");
 const { ToDoAgent } = require("../agents/todoAgent");
